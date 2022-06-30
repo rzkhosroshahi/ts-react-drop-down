@@ -1,5 +1,23 @@
 :root {
   --gray-100: #fafafa;
+  --gray-200: #efefef;
+  --gray-400: #838890;
+  --blue-100: #d8e2fd;
+  --blue-400: #6677c2;
+  --item-width: 300px;
+  --input-height: 40px;
+  --item-height: 32px;
+}
+
+input,
+ul,
+li {
+  all: unset;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -9,4 +27,3 @@ body {
     sans-serif;
   background-color: var(--gray-100);
 }
-

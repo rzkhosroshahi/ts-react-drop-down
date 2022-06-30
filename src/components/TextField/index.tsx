@@ -3,6 +3,7 @@ import React, { forwardRef } from "react";
 interface ITextField {
     required?: boolean;
     invalid?: boolean;
+    children?: React.ReactNode;
 }
 type TextFieldProps = React.HTMLProps<HTMLInputElement> & ITextField;
 

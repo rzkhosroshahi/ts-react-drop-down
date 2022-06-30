@@ -31,7 +31,9 @@
       "indent": [
         "error",
         4
-      ]
+      ],
+      "object-curly-spacing": ["error", "always"],
+      "semi": ["error", "always"]
     }
   },
   "browserslist": {

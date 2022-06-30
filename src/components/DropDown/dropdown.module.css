@@ -1,0 +1,82 @@
+@keyframes openDropDown {
+    from {
+        transform: translateY(-4px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.form {
+    position: relative;
+}
+.textFieldWrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: var(--item-width);
+    min-height: var(--input-height);
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 2px var(--blue-100);
+    transition: all 0.2s ease-in-out;
+}
+.textFieldWrapperOpen {
+    box-shadow: 0 0 0 2px var(--blue-100);
+    border-color: var(--blue-400);
+}
+.textField {
+    padding-right: 8px;
+    padding-left: 8px;
+    width: 100%;
+    height: var(--input-height);
+    outline: #6677c2;
+}
+.chevron {
+    position: absolute;
+    top: calc(var(--input-height) / 2 - 8px);
+    right: 8px;
+    color: var(--gray-400);
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+}
+.chevronOpen {
+    transform: rotate(180deg);
+}
+.list {
+    position: absolute;
+    top: calc(var(--input-height) + 8px);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: var(--item-width);
+    background-color: white;
+    padding: 8px;
+    border-radius: 16px;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 1px 8px rgb(0 0 0 / 10%);
+    animation: openDropDown 0.2s alternate;
+}
+.listItem {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 4px;
+    padding-right: 8px;
+    padding-left: 8px;
+    min-height: var(--item-height);
+    transition: all 0.2s ease-in-out;
+}
+.listItem:not(.listItemSelected):hover {
+    background-color: var(--blue-100);
+    color: var(--blue-400);
+}
+.listItemSelected {
+    background-color: var(--blue-100);
+    color: var(--blue-400);
+    font-weight: 500;
+}
